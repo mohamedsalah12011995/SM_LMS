@@ -1,0 +1,86 @@
+[
+
+  {
+    "identityNumber": "12345678",
+    "identityExpiryDate": "",
+    "firstName": "Ahmad",
+    "fatherName": "Ali",
+    "grandFatherName": "Kamal",
+    "familyName": "Mohammad",
+    "dateOfBirthH": "20/12/1443",
+    "passportNumber": "",
+    "passportExpiryDate": "",
+    "identitySource": "Identity Source",
+    "jobName": "Engineer",
+    "nationality": "Saudi",
+    "gender": "M",
+    "lifeStatusCode": 1
+  },
+  {
+    "identityNumber": "",
+    "identityExpiryDate": "",
+    "firstName": "Noha",
+    "fatherName": "Mohammad",
+    "grandFatherName": "Kamal",
+    "familyName": "Mohammad",
+    "dateOfBirthH": "13/08/1444",
+    "passportNumber": "12345678987654",
+    "passportExpiryDate": "23/12/1443",
+    "identitySource": "Identity Source",
+    "jobName": "Engineer",
+    "nationality": "Saudi",
+    "gender": "F",
+    "lifeStatusCode": 1
+  },
+  {
+    "identityNumber": "17645448",
+    "identityExpiryDate": "",
+    "firstName": "Hany",
+    "fatherName": "Gamal",
+    "grandFatherName": "Ahmad",
+    "familyName": "Mohammad",
+    "dateOfBirthH": "28/12/1443",
+    "passportNumber": "",
+    "passportExpiryDate": "",
+    "identitySource": "Identity Source",
+    "jobName": "Engineer",
+    "nationality": "Saudi",
+    "gender": "M",
+    "lifeStatusCode": 1
+  },
+  {
+    "identityNumber": "87545673",
+    "identityExpiryDate": "",
+    "firstName": "Omar",
+    "fatherName": "Ahmad",
+    "grandFatherName": "Ahmad",
+    "familyName": "Mohammad",
+    "dateOfBirthH": "16/12/1443",
+    "passportNumber": "",
+    "passportExpiryDate": "",
+    "identitySource": "Identity Source",
+    "jobName": "Engineer",
+    "nationality": "Saudi",
+    "gender": "M",
+    "lifeStatusCode": 1
+  },
+  {
+    "identityNumber": "",
+    "identityExpiryDate": "",
+    "firstName": "Kareem",
+    "fatherName": "Ahmad",
+    "grandFatherName": "Ahmad",
+    "familyName": "Mohammad",
+    "dateOfBirthH": "05-12-1443",
+    "passportNumber": "236567658787897",
+    "passportExpiryDate": "24/12/1443",
+    "identitySource": "Identity Source",
+    "jobName": "Engineer",
+    "nationality": "Saudi",
+    "gender": "M",
+    "lifeStatusCode": 1
+  }
+
+  ]
+
+

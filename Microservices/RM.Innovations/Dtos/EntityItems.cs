@@ -1,0 +1,26 @@
+﻿using RM.Core.Helpers;
+using System.Text.Json.Serialization;
+
+namespace RM.Innovations.Dtos
+{
+    public class EntityItems
+    {
+        [JsonIgnore]
+        public int? Id { get; set; }
+        public string ID { set { Id = Accessor.Set(value); } get { return Accessor.Get<int?>(Id); } }
+
+        public string NameAr { get; set; }
+        public string NameEn { get; set; }
+        public List<EntityItems> Items { get; set; } = new List<EntityItems>();
+    }
+
+    public class Entity
+    {
+        [JsonIgnore]
+        public int? Id { get; set; }
+        public string ID { set { Id = Accessor.Set(value); } get { return Accessor.Get<int?>(Id); } }
+
+        public string NameAr { get; set; }
+        public string NameEn { get; set; }
+    }
+}

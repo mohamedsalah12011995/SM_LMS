@@ -1,0 +1,14 @@
+﻿using RM.Core.Helpers;
+using System.Text.Json.Serialization;
+
+namespace RM.Exams.Records.ExamTrainingCourses.Portal
+{
+    public record QueryTrainee
+    {
+        public string IdCardNumber { get; set; }
+        [JsonIgnore]
+        public int? TrainingCourseScheduleId { get; set; }
+        public string trainingCourseScheduleId { set { TrainingCourseScheduleId = Accessor.Set(value); } get { return Accessor.Get(TrainingCourseScheduleId); } }
+
+    }
+}

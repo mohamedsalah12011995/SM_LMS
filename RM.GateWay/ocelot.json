@@ -1,0 +1,1297 @@
+﻿{
+  "RateLimitOptions": {
+    "ClientWhitelist": [],
+    "EnableRateLimiting": false,
+    "Period": "1s",
+    "PeriodTimespan": 1,
+    "Limit": 999
+  },
+
+  "Routes": [
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7116
+        }
+      ],
+      "DownstreamPathTemplate": "/api/GardensCompetition/{GardensCompetitionRequestfun}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/GardensCompetition/{GardensCompetitionRequestfun}"
+    },
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 43815
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Events/{EidFiterRequestfun}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Events/{EidFiterRequestfun}"
+    },
+
+    {
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 32878
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Innovations/Resource/{fileName}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Innovations/Resource/{fileName}"
+    },
+
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 32878
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Innovations/{Innovationsfun}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Innovations/{Innovationsfun}"
+    },
+    {
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5521
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Surveys/Resource/{fileName}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Surveys/Resource/{fileName}"
+    },
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5521
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Surveys/{Surveysfun}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Surveys/{Surveysfun}"
+    },
+
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44394
+        }
+      ],
+      "DownstreamPathTemplate": "/api/OpenData/{OpenDatafun}",
+      "DownstreamScheme": "https",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/OpenData/{OpenDatafun}"
+    },
+
+    {
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 15902
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Volunteers/Resource/{fileName}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Volunteers/Resource/{fileName}"
+    },
+
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 15902
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Volunteers/{Volunteersfun}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Volunteers/{Volunteersfun}"
+    },
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5599
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Rates/{Ratesfun}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Rates/{Ratesfun}"
+    },
+
+    {
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 12959
+        }
+      ],
+      "DownstreamPathTemplate": "/api/partners/Resource/{fileName}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/partners/Resource/{fileName}"
+    },
+
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 12959
+        }
+      ],
+      "DownstreamPathTemplate": "/api/partners/{Partnersfun}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/partners/{Partnersfun}"
+    },
+    {
+
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 42174
+        }
+      ],
+      "DownstreamPathTemplate": "/api/ContactUs/{ContacUsfun}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/ContactUs/{ContacUsfun}"
+    },
+
+    {
+
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5545
+        }
+      ],
+      "DownstreamPathTemplate": "/api/FAQs/{FAQfun}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/FAQs/{FAQfun}"
+    },
+
+    {
+
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 42174
+        }
+      ],
+      "DownstreamPathTemplate": "/api/ContactUs/Resource/{fileName}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/ContactUs/Resource/{fileName}"
+    },
+    {
+
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 64077
+        }
+      ],
+      "DownstreamPathTemplate": "/api/EserviceStats/{eservicesStatsfun}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/EserviceStats/{eservicesStatsfun}"
+    },
+    {
+
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3740
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Advertisements/{advfun}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Advertisements/{advfun}"
+    },
+    {
+
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3740
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Advertisements/Resource/{fileName}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Advertisements/Resource/{fileName}"
+    },
+
+    {
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 17035
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Investments/Resource/{fileName}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Investments/Resource/{fileName}"
+    },
+
+    {
+
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 17035
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Investments/{invfun}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Investments/{invfun}"
+    },
+
+    {
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 28271
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Govservices/Resource/{fileName}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Govservices/Resource/{fileName}"
+    },
+
+    {
+
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 28271
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Govservices/{govservicesfun}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Govservices/{govservicesfun}"
+    },
+
+    {
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54913
+        }
+      ],
+      "DownstreamPathTemplate": "/api/MobileApplications/Resource/{fileName}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/MobileApplications/Resource/{fileName}"
+    },
+
+    {
+
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54913
+        }
+      ],
+      "DownstreamPathTemplate": "/api/MobileApplications/{mobappfun}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/MobileApplications/{mobappfun}"
+    },
+
+    {
+
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 31942
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Officials/Resource/{fileName}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Officials/Resource/{fileName}"
+    },
+
+    {
+
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 31942
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Officials/{fun}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Officials/{fun}"
+    },
+
+    {
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 32698
+        }
+      ],
+      "DownstreamPathTemplate": "/api/multimedia/Resource/{fileName}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/multimedia/Resource/{fileName}"
+    },
+
+    {
+
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 32698
+        }
+      ],
+      "DownstreamPathTemplate": "/api/multimedia/{fun}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/multimedia/{fun}"
+    },
+    {
+
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 1995
+        }
+      ],
+      "DownstreamPathTemplate": "/api/menus/{fun}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/menus/{fun}"
+    },
+    {
+
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 13475
+        }
+      ],
+      "DownstreamPathTemplate": "/api/awards/{fun}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/awards/{fun}"
+    },
+    {
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 13475
+        }
+      ],
+      "DownstreamPathTemplate": "/api/awards/Resource/{fileName}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamPathTemplate": "/gateway/awards/Resource/{fileName}"
+    },
+    {
+
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 13345
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Statistics/{fun}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Statistics/{fun}"
+    },
+    {
+
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 51173
+        }
+      ],
+      "DownstreamPathTemplate": "/api/InitiativesProjects/{ProjectAction}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/InitiativesProjects/{ProjectAction}"
+    },
+    {
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 34120
+        }
+      ],
+      "DownstreamPathTemplate": "/api/news/Resource/{fileName}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamPathTemplate": "/gateway/news/Resource/{fileName}"
+    },
+    {
+
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 34120
+        }
+      ],
+      "DownstreamPathTemplate": "/api/news/{fun}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/news/{fun}"
+    },
+
+
+
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 34769
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Users/GetUserLookps",
+      "DownstreamScheme": "http",
+      "RouteClaimsRequirement": {
+        "PL_Read": "true",
+        "PL_Write": "true",
+        "PL_Reports": "true"
+      },
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Users/GetUserLookps"
+    },
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 14650
+        }
+      ],
+      "DownstreamPathTemplate": "/api/articles/{articlesAction}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/articles/{articlesAction}"
+    },
+
+    {
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 62731
+        }
+      ],
+      "DownstreamPathTemplate": "/api/ExternalSites/Resource/{fileName}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/ExternalSites/Resource/{fileName}"
+    },
+
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 62731
+        }
+      ],
+      "DownstreamPathTemplate": "/api/ExternalSites/{ExternalSitesAction}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/ExternalSites/{ExternalSitesAction}"
+    },
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 6460
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Documents/{DocumentsAction}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Documents/{DocumentsAction}"
+    },
+    {
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 6460
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Documents/Resource/{fileName}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Documents/Resource/{fileName}"
+    },
+
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 26219
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Regulations/{RegAction}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Regulations/{RegAction}"
+    },
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 15225
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Comments/{CommentsAction}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Comments/{CommentsAction}"
+    },
+    {
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 34769
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Users/GenerateToken",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Users/GenerateToken"
+    },
+
+    {
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 34769
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Users/GenerateTokenWinAuth",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Users/GenerateTokenWinAuth"
+    },
+
+    {
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 34769
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Users/IAMLogin",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamPathTemplate": "/gateway/Users/IAMLogin"
+    },
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 34769
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Users/{usersAction}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Users/{usersAction}"
+    },
+
+    {
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 6441
+        }
+      ],
+      "DownstreamPathTemplate": "/api/References/Resource/{fileName}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Reference/Resource/{fileName}"
+    },
+
+    {
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 6441
+        }
+      ],
+      "DownstreamPathTemplate": "/api/References/{RefAction}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Reference/{RefAction}"
+    },
+    {
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 36018
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Common/{RefAction}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Common/{RefAction}"
+    },
+    {
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 36018
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Bls/{RefAction}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Bls/{RefAction}"
+    },
+    {
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 36018
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Deed/{RefAction}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Deed/{RefAction}"
+    },
+    {
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 36018
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Invsetment/{RefAction}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Invsetment/{RefAction}"
+    },
+    {
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 36018
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Grievance/{RefAction}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Grievance/{RefAction}"
+    },
+    {
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 36018
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Deceased/{RefAction}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Deceased/{RefAction}"
+    },
+    {
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 36018
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Complaint/{RefAction}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Complaint/{RefAction}"
+    },
+    {
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 36018
+        }
+      ],
+      "DownstreamPathTemplate": "/api/GInquiry/{RefAction}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/GInquiry/{RefAction}"
+    },
+    {
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 36018
+        }
+      ],
+      "DownstreamPathTemplate": "/api/CloudTradingLicense/{RefAction}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/CloudTradingLicense/{RefAction}"
+    },
+    {
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 36018
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Dcs/{RefAction}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Dcs/{RefAction}"
+    },
+
+    {
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 36018
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Swp/{RefAction}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Swp/{RefAction}"
+    },
+    {
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 36018
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Asphalting/{RefAction}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Asphalting/{RefAction}"
+    },
+    {
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 36018
+        }
+      ],
+      "DownstreamPathTemplate": "/api/User/{RefAction}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/User/{RefAction}"
+    },
+    {
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 36018
+        }
+      ],
+      "DownstreamPathTemplate": "/api/MedInquiries/{RefAction}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/MedInquiries/{RefAction}"
+    },
+    {
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 36018
+        }
+      ],
+      "DownstreamPathTemplate": "/api/TLS/{RefAction}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/TLS/{RefAction}"
+    },
+    {
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 36018
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Appointment/{RefAction}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Appointment/{RefAction}"
+    },
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 59153
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Jobs/{fun}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Jobs/{fun}"
+    },
+    {
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 59153
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Jobs/Resource/{fileName}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Jobs/Resource/{fileName}"
+    },
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 33938
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Permits/{fun}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Permits/{fun}"
+    },
+    {
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 33938
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Permits/Resource/{fileName}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Permits/Resource/{fileName}"
+    },
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 26605
+        }
+      ],
+      "DownstreamPathTemplate": "/api/ScientificLetters/{fun}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/ScientificLetters/{fun}"
+    },
+    {
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 26605
+        }
+      ],
+      "DownstreamPathTemplate": "/api/ScientificLetters/Resource/{fileName}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/ScientificLetters/Resource/{fileName}"
+    },
+    {
+
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8822
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Orders/{Orderfun}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Orders/{Orderfun}"
+    },
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 39974
+        }
+      ],
+      "DownstreamPathTemplate": "/api/FileSharing/{fun}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/FileSharing/{fun}"
+    },
+    {
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 39974
+        }
+      ],
+      "DownstreamPathTemplate": "/api/FileSharing/Resource/{fileName}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/FileSharing/Resource/{fileName}"
+    },
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 61045
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Exams/{fun}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Exams/{fun}"
+    },
+    {
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 61045
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Exams/Resource/{fileName}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Exams/Resource/{fileName}"
+    },
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 2194
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Entities/{fun}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Entities/{fun}"
+    },
+    {
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 62389
+        }
+      ],
+      "DownstreamPathTemplate": "/api/DynamicForms/Resource/{fileName}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/DynamicForms/Resource/{fileName}"
+    },
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 62389
+        }
+      ],
+      "DownstreamPathTemplate": "/api/DynamicForms/{fun}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/DynamicForms/{fun}"
+    },
+
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 39725
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Lookups/{fun}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Lookups/{fun}"
+    },
+    {
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 47712
+        }
+      ],
+      "DownstreamPathTemplate": "/api/WorkFlow/Resource/{fileName}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/WorkFlow/Resource/{fileName}"
+    },
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 47712
+        }
+      ],
+      "DownstreamPathTemplate": "/api/WorkFlow/{fun}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/WorkFlow/{fun}"
+    },
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 10405
+        }
+      ],
+      "DownstreamPathTemplate": "/api/EmailService/{fun}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/EmailService/{fun}"
+    },
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 29806
+        }
+      ],
+      "DownstreamPathTemplate": "/api/PDFService/{fun}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/PDFService/{fun}"
+    },
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 17714
+        }
+      ],
+      "DownstreamPathTemplate": "/api/CronJobService/{fun}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/CronJobService/{fun}"
+    },
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 14448
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Feedbacks/{fun}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Feedbacks/{fun}"
+    }
+
+  ]
+}
