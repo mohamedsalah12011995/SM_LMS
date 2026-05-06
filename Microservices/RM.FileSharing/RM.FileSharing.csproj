@@ -13,6 +13,7 @@
     <PackageReference Include="EPPlus" Version="7.1.2" />
     <PackageReference Include="Mapster" Version="7.4.0" />
     <PackageReference Include="Mapster.DependencyInjection" Version="1.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.26" />
     <PackageReference Include="Serilog.AspNetCore" Version="8.0.1" />
     <PackageReference Include="Serilog.Sinks.MSSqlServer" Version="6.6.0" />
     <PackageReference Include="Serilog.Sinks.Seq" Version="7.0.0" />

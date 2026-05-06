@@ -31,8 +31,6 @@ builder.Services.AddHttpContextAccessor()
 //.AddScoped<IMapper, ServiceMapper>()
 .AddMapster();
 
-
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
