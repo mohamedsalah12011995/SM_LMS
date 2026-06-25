@@ -1,4 +1,6 @@
-﻿using RM.Models.Models;
+﻿#nullable disable
+
+using RM.Models.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;

@@ -11,7 +11,9 @@ namespace RM.Advertisements.Services
         Task<OperationOutput> GetMainSliderList(Dtos.Advertisements RequestedData);
         Task<OperationOutput> SaveAdvertisment(Dtos.Advertisements RequestedData);
         Task<OperationOutput> GetAdvertismentDetails(Dtos.Advertisements RequestedData);
+        Task<OperationOutput> GetTodayAdvertisementsAsync(Dtos.Advertisements RequestedData);
 
+        Task<OperationOutput> GetAdvertisementsBetweenDatesAsync(Dtos.Advertisements RequestedData);
         OperationOutput ModelActions(Dtos.Advertisements RequestedData);
         OperationOutput SortOrder(List<Dtos.Advertisements> RequestedData);
 

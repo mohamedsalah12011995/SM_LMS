@@ -48,6 +48,20 @@ namespace RM.Advertisements.Controllers
         {
               return await _advertisementsService.GetAdvertismentDetails(RequestedData.Adapt<Dtos.Advertisements>());
         }
+        //To Do
+        [HttpPost("today")]
+        [Produces("application/json")]
+        public async Task<OperationOutput> GetTodayAdvertisements(GetTodayAdvertisementsRecord RequestedData)
+        {
+            return await _advertisementsService.GetTodayAdvertisementsAsync(RequestedData.Adapt<Dtos.Advertisements>());
+        }
+        //To Do
+        [HttpPost("between-dates")]
+        [Produces("application/json")]
+        public async Task<OperationOutput> GetAdvertisementsBetweenDates(GetAdvertisementsBetweenDatesRecord RequestedData)
+        {
+            return await _advertisementsService.GetAdvertisementsBetweenDatesAsync(RequestedData.Adapt<Dtos.Advertisements>());
+        }
 
         [HttpPost]
         [Produces("application/json")]

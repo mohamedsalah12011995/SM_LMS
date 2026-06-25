@@ -14,6 +14,7 @@ using static RM.Core.Helpers.Enums;
 using Microsoft.Extensions.Caching.Distributed;
 using System.Text.Json;
 using Common;
+using Microsoft.OpenApi.Validations.Rules;
 
 namespace RM.Advertisements.Services
 {
@@ -262,6 +263,64 @@ namespace RM.Advertisements.Services
 
         }
 
+        public async Task<OperationOutput> GetTodayAdvertisementsAsync(Dtos.Advertisements RequestedData)
+        {
+            if (RequestOwner == null)
+                return GetOperationOutput(header: Enums.ServiceMessages.NoTokenRequested);
+
+            var today = DateTime.Today;
+            var tomorrow = today.AddDays(1);
+
+            var advertisements = await _unitOfWork.Advertisements
+                .FindAllAsync(x =>
+                    x.CreatedDate >= today &&
+                    x.CreatedDate < tomorrow &&
+                    x.IsDeleted != true);
+
+            var advertisementsDto = advertisements
+                .Adapt<List<Dtos.Advertisements>>(
+                    Dtos.Advertisements.SelectConfig(ImagesGetPath, null));
+
+            return GetOperationOutput(
+                header: Enums.ServiceMessages.TransactionSuccess,
+                new OutputDictionary(
+                    OperationOutputKeys.AdvertisementsEntity,
+                    advertisementsDto));
+        }
+
+        public async Task<OperationOutput> GetAdvertisementsBetweenDatesAsync(
+     Dtos.Advertisements RequestedData)
+        {
+            if (RequestOwner == null)
+                return GetOperationOutput(header: Enums.ServiceMessages.NoTokenRequested);
+
+            if (!RequestedData.FromDate.HasValue ||
+                !RequestedData.ToDate.HasValue)
+            {
+                return GetOperationOutput(
+                    header: Enums.ServiceMessages.RequiredFiled);
+            }
+
+            var startDate = RequestedData.FromDate.Value.Date;
+            var endDate = RequestedData.ToDate.Value.Date.AddDays(1);
+
+            var advertisements = await _unitOfWork.Advertisements
+                .FindAllAsync(x =>
+                    x.CreatedDate >= startDate &&
+                    x.CreatedDate < endDate &&
+                    x.IsDeleted != true);
+
+            var advertisementsDto = advertisements
+                .Adapt<List<Dtos.Advertisements>>(
+                    Dtos.Advertisements.SelectConfig(ImagesGetPath, null));
+
+            return GetOperationOutput(
+                header: Enums.ServiceMessages.TransactionSuccess,
+                new OutputDictionary(
+                    OperationOutputKeys.AdvertisementsEntity,
+                    advertisementsDto));
+        }
+
         public OperationOutput ModelActions(Dtos.Advertisements RequestedData)
         {
             Advertisement DbItem = null;
@@ -421,6 +480,7 @@ namespace RM.Advertisements.Services
                    new OutputDictionary(OperationOutputKeys.AdvertisementsEntity, ItemDto),
                    new OutputDictionary(OperationOutputKeys.EntityID, ItemDto.entityId));
         }
+
 
         #endregion
 

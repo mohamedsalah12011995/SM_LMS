@@ -1,6 +1,4 @@
-﻿
-
-#nullable disable
+﻿#nullable disable
 
 namespace RM.Models
 {
@@ -200,6 +198,11 @@ namespace RM.Models
             FeedbacksCreatedByNavigations = new HashSet<Feedbacks>();
             FeedbacksDeletedByNavigations = new HashSet<Feedbacks>();
             FeedbacksUpdatedByNavigations = new HashSet<Feedbacks>();
+
+            CourseActivatedByNavigations = new HashSet<Course>();
+            CourseCreatedByNavigations = new HashSet<Course>();
+            CourseDeletedByNavigations = new HashSet<Course>();
+            CourseUpdatedByNavigations = new HashSet<Course>();
 
         }
 
@@ -432,6 +435,11 @@ namespace RM.Models
         public virtual ICollection<Feedbacks> FeedbacksCreatedByNavigations { get; set; }
         public virtual ICollection<Feedbacks> FeedbacksDeletedByNavigations { get; set; }
         public virtual ICollection<Feedbacks> FeedbacksUpdatedByNavigations { get; set; }
+
+        public virtual ICollection<Course> CourseActivatedByNavigations { get; set; }
+        public virtual ICollection<Course> CourseCreatedByNavigations { get; set; }
+        public virtual ICollection<Course> CourseDeletedByNavigations { get; set; }
+        public virtual ICollection<Course> CourseUpdatedByNavigations { get; set; }
 
 
 

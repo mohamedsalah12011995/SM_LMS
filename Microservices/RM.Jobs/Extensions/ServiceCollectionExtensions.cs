@@ -9,10 +9,35 @@ namespace RM.Jobs.Extensions
     public static class ServiceCollectionExtensions
     {
         public static IServiceCollection AddSwaggerGen(this IServiceCollection services)
-           => services.AddSwaggerGen(c =>
-           {
-               c.SwaggerDoc("v1", new OpenApiInfo { Title = "RM.Jobs", Version = "v1" });
-           });
+         => services.AddSwaggerGen(c =>
+         {
+             c.SwaggerDoc("v1", new OpenApiInfo { Title = "RM.Advertisements", Version = "v1" });
+
+             c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+             {
+                 Name = "Authorization",
+                 Type = SecuritySchemeType.Http,
+                 Scheme = "bearer",
+                 BearerFormat = "JWT",
+                 In = ParameterLocation.Header,
+                 Description = "Enter 'Bearer' [space] and then your valid token.\nExample: Bearer eyJhbGciOiJIUzI1NiIs..."
+             });
+
+             c.AddSecurityRequirement(new OpenApiSecurityRequirement
+        {
+            {
+                new OpenApiSecurityScheme
+                {
+                    Reference = new OpenApiReference
+                    {
+                        Type = ReferenceType.SecurityScheme,
+                        Id = "Bearer"
+                    }
+                },
+                new string[] {}
+            }
+      });
+         });
 
 
         public static IServiceCollection AddDatabaseContext(this IServiceCollection services

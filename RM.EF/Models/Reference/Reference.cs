@@ -1,9 +1,7 @@
-﻿
-using System;
-using System.Collections.Generic;
+﻿#nullable disable
 
-
-#nullable disable
+using RM.Courses.Models;
+using RM.EF.Models.Course;
 
 namespace RM.Models
 {
@@ -63,6 +61,7 @@ namespace RM.Models
             Recommendations = new HashSet<Recommendations>();
             CronSettings = new HashSet<CronSettings>();
             Feedbacks = new HashSet<Feedbacks>();
+            Courses = new HashSet<Course>();
         }
 
         public int Id { get; set; }
@@ -143,6 +142,12 @@ namespace RM.Models
         public virtual ICollection<Recommendations> Recommendations { get; set; }
         public virtual ICollection<CronSettings> CronSettings { get; set; }
         public virtual ICollection<Feedbacks> Feedbacks { get; set; }
+        public virtual ICollection<Course> Courses { get; set; }
+        public virtual ICollection<Instructor> Instructors { get; set; }
+
+        public virtual ICollection<CourseCategory> CourseCategorys { get; set; }
+        public virtual ICollection<CourseTag> CourseTags { get; set; }
+
 
     }
 }

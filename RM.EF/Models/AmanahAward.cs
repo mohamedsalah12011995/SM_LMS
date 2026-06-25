@@ -1,5 +1,7 @@
 ﻿
 
+#nullable disable
+
 namespace RM.Models
 {
     public partial class AmanahAward

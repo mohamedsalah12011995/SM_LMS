@@ -1,4 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿#nullable disable
+
+using Microsoft.EntityFrameworkCore;
+using RM.Courses.Models;
+using RM.EF.Models.Course;
 
 
 namespace RM.Models.Extensions
@@ -3133,6 +3137,354 @@ namespace RM.Models.Extensions
                                 .HasForeignKey(d => d.FeedbacksDataSourceId)
                                 .HasConstraintName("FK_FeedbacksAnswers_FeedbacksDataSource");
             });
+        }
+
+        public static void CoursesConfiguration(this ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Course>(entity =>
+            {
+                entity.ToTable("Course", "course");
+
+                entity.HasKey(e => e.Id);
+
+                entity.Property(e => e.Code)
+                      .HasMaxLength(50)
+                      .IsRequired();
+
+                entity.Property(e => e.TitleAr)
+                      .HasMaxLength(250)
+                      .IsRequired();
+
+                entity.Property(e => e.TitleEn)
+                      .HasMaxLength(250)
+                      .IsRequired();
+
+                entity.Property(e => e.DescriptionAr)
+                      .HasMaxLength(2000);
+
+                entity.Property(e => e.DescriptionEn)
+                      .HasMaxLength(2000);
+
+                entity.Property(e => e.LanguageCode)
+                      .HasMaxLength(10);
+
+                entity.Property(e => e.Status)
+                      .HasConversion<int>();
+
+                entity.Property(e => e.Level)
+                      .HasConversion<int>();
+
+                entity.HasOne(e => e.Category)
+                      .WithMany(c => c.Courses)
+                      .HasForeignKey(e => e.CategoryId);
+
+                entity.HasOne(e => e.ActivatedByNavigation)
+                     .WithMany(c => c.CourseActivatedByNavigations)
+                     .HasForeignKey(e => e.ActivatedBy);
+
+                entity.HasOne(e => e.CreatedByNavigation)
+                     .WithMany(c => c.CourseCreatedByNavigations)
+                     .HasForeignKey(e => e.CreatedBy);
+
+                entity.HasOne(e => e.UpdatedByNavigation)
+                     .WithMany(c => c.CourseUpdatedByNavigations)
+                     .HasForeignKey(e => e.UpdatedBy);
+
+                entity.HasOne(e => e.DeletedByNavigation)
+                     .WithMany(c => c.CourseDeletedByNavigations)
+                     .HasForeignKey(e => e.DeletedBy);
+
+                entity.HasOne(e => e.Entity)
+                     .WithMany(c => c.Courses)
+                     .HasForeignKey(e => e.EntityId);
+
+            
+                entity.HasOne(d => d.Reference)
+                      .WithMany(p => p.Courses)
+                      .HasForeignKey(d => d.ReferenceId)
+                      .OnDelete(DeleteBehavior.NoAction)
+                      .HasConstraintName("FK_Courses_References");
+
+            });
+
+            modelBuilder.Entity<CourseTagMapping>(entity =>
+            {
+                entity.ToTable("CourseTagMapping", "course");
+
+                entity.HasKey(e => e.Id);
+
+
+                entity.HasOne(e => e.Course)
+                      .WithMany(e => e.CourseTagMappings)
+                      .HasForeignKey(e => e.CourseId);
+
+                entity.HasOne(e => e.Tag)
+                      .WithMany(e => e.CourseTagMappings)
+                      .HasForeignKey(e => e.TagId);
+
+            });
+
+            modelBuilder.Entity<CourseTag>(entity =>
+            {
+                entity.ToTable("CourseTag", "course");
+
+                entity.HasKey(e => e.Id);
+
+                entity.Property(e => e.NameAr)
+                     .HasMaxLength(250)
+                     .IsRequired();
+
+                entity.Property(e => e.NameEn)
+                      .HasMaxLength(250)
+                      .IsRequired();
+
+                entity.HasOne(d => d.Reference)
+                    .WithMany(p => p.CourseTags)
+                    .HasForeignKey(d => d.ReferenceId)
+                    .OnDelete(DeleteBehavior.NoAction)
+                    .HasConstraintName("FK_Courses_References");
+
+
+            });
+
+            modelBuilder.Entity<CourseInstructor>(entity =>
+            {
+                entity.ToTable("CourseInstructor", "course");
+
+                entity.HasKey(e => e.Id);
+
+                entity.Property(e => e.IsPrimaryInstructor)
+                     .HasConversion<bool>();
+
+
+                entity.HasOne(e => e.Course)
+                      .WithMany(e => e.CourseInstructors)
+                      .HasForeignKey(e => e.CourseId);
+
+                entity.HasOne(e => e.Instructor)
+                      .WithMany(e => e.CourseInstructors)
+                      .HasForeignKey(e => e.InstructorId);
+
+            });
+
+            modelBuilder.Entity<Instructor>(entity =>
+            {
+                entity.ToTable("Instructor", "course");
+
+                entity.HasKey(e => e.Id);
+
+                entity.Property(e => e.FullNameAr)
+                     .HasMaxLength(250)
+                     .IsRequired();
+
+                entity.Property(e => e.FullNameEn)
+                      .HasMaxLength(250)
+                      .IsRequired();
+
+                entity.Property(e => e.BioAr)
+                    .HasMaxLength(1000);
+
+                entity.Property(e => e.BioEn)
+                      .HasMaxLength(1000);
+
+                entity.Property(e => e.ImageUrl)
+                      .HasMaxLength(1000);
+
+                entity.HasOne(d => d.Reference)
+                    .WithMany(p => p.Instructors)
+                    .HasForeignKey(d => d.ReferenceId)
+                    .OnDelete(DeleteBehavior.NoAction)
+                    .HasConstraintName("FK_Courses_References");
+
+            });
+
+            modelBuilder.Entity<CourseLearningOutcome>(entity =>
+            {
+                entity.ToTable("CourseLearningOutcome", "course");
+
+                entity.HasKey(e => e.Id);
+
+                entity.Property(e => e.TitleAr)
+                      .HasMaxLength(250)
+                      .IsRequired();
+
+                entity.Property(e => e.TitleEn)
+                      .HasMaxLength(250)
+                      .IsRequired();
+
+                entity.HasOne(e => e.Course)
+                      .WithMany(e => e.CourseLearningOutcomes)
+                      .HasForeignKey(e => e.CourseId);
+
+            });
+
+            modelBuilder.Entity<CourseCategory>(entity =>
+            {
+                entity.ToTable("CourseCategorys", "course");
+
+                entity.HasKey(e => e.Id);
+
+                entity.Property(e => e.NameAr)
+                      .HasMaxLength(250)
+                      .IsRequired();
+
+                entity.Property(e => e.NameEn)
+                      .HasMaxLength(250)
+                      .IsRequired();
+
+                entity.Property(e => e.DescriptionAr)
+                      .HasMaxLength(1000);
+
+                entity.Property(e => e.ImageUrl)
+                      .HasMaxLength(1000);
+
+                entity.Property(e => e.IsActive)
+                      .HasConversion<bool>();
+
+                entity.Property(e => e.DescriptionEn)
+                      .HasMaxLength(1000);
+
+                entity.HasOne(e => e.ParentCategory)
+                      .WithMany(e => e.ChildCategories)
+                      .HasForeignKey(e => e.ParentCategoryId)
+                      .OnDelete(DeleteBehavior.Restrict);
+
+                entity.HasOne(d => d.Reference)
+                     .WithMany(p => p.CourseCategorys)
+                     .HasForeignKey(d => d.ReferenceId)
+                     .OnDelete(DeleteBehavior.NoAction)
+                     .HasConstraintName("FK_Courses_References");
+            });
+
+            modelBuilder.Entity<CourseSection>(entity =>
+            {
+                entity.ToTable("CourseSections", "course");
+
+                entity.HasKey(e => e.Id);
+
+                entity.Property(e => e.TitleAr)
+                      .HasMaxLength(250)
+                      .IsRequired();
+
+                entity.Property(e => e.TitleEn)
+                      .HasMaxLength(250)
+                      .IsRequired();
+
+                entity.Property(e => e.DescriptionAr)
+                     .HasMaxLength(1000);
+
+                entity.Property(e => e.DescriptionEn)
+                     .HasMaxLength(1000);
+
+                entity.HasOne(e => e.Course)
+                      .WithMany(e => e.Sections)
+                      .HasForeignKey(e => e.CourseId)
+                      .OnDelete(DeleteBehavior.Cascade);
+            });
+
+            modelBuilder.Entity<CoursePrerequisite>(entity =>
+            {
+                entity.ToTable("CoursePrerequisite", "course");
+
+                entity.HasKey(e => e.Id);
+
+                entity.Property(e => e.TitleAr)
+                      .HasMaxLength(250)
+                      .IsRequired();
+
+                entity.Property(e => e.TitleEn)
+                      .HasMaxLength(250)
+                      .IsRequired();
+
+                entity.HasOne(e => e.Course)
+                      .WithMany(e => e.CoursePrerequisites)
+                      .HasForeignKey(e => e.CourseId);
+            });
+
+            modelBuilder.Entity<CourseTargetAudience>(entity =>
+            {
+                entity.ToTable("CourseTargetAudience", "course");
+
+                entity.HasKey(e => e.Id);
+
+                entity.Property(e => e.TitleAr)
+                      .HasMaxLength(250)
+                      .IsRequired();
+
+                entity.Property(e => e.TitleEn)
+                      .HasMaxLength(250)
+                      .IsRequired();
+
+                entity.HasOne(e => e.Course)
+                      .WithMany(e => e.CourseTargetAudiences)
+                      .HasForeignKey(e => e.CourseId);
+            });
+
+            modelBuilder.Entity<CourseLesson>(entity =>
+            {
+                entity.ToTable("CourseLessons", "course");
+
+                entity.HasKey(e => e.Id);
+
+                entity.Property(e => e.TitleAr)
+                      .HasMaxLength(250)
+                      .IsRequired();
+
+                entity.Property(e => e.TitleEn)
+                      .HasMaxLength(250)
+                      .IsRequired();
+
+                entity.Property(e => e.DescriptionAr)
+                      .HasMaxLength(2000);
+
+                entity.Property(e => e.DescriptionEn)
+                      .HasMaxLength(2000);
+
+                entity.Property(e => e.VideoUrl)
+                      .HasMaxLength(2000);
+
+                entity.Property(e => e.ThumbnailUrl)
+                      .HasMaxLength(2000);
+
+                entity.Property(e => e.Status)
+                      .HasConversion<int>();
+
+                entity.Property(e => e.IsPreview)
+                      .HasConversion<bool>();
+
+                entity.HasOne(e => e.CourseSection)
+                      .WithMany(e => e.CourseLessons)
+                      .HasForeignKey(e => e.CourseSectionId);
+            });
+
+            modelBuilder.Entity <CourseLessonMaterial>(entity =>
+            {
+                entity.ToTable("CourseMaterials", "course");
+
+                entity.HasKey(e => e.Id);
+
+                entity.Property(e => e.TitleAr)
+                      .HasMaxLength(250)
+                      .IsRequired();
+
+                entity.Property(e => e.TitleEn)
+                      .HasMaxLength(250)
+                      .IsRequired();
+
+                entity.Property(e => e.FileUrl)
+                      .HasMaxLength(1000);
+
+                entity.Property(e => e.FileType)
+                      .HasConversion<int>();
+
+                entity.HasOne(e => e.CourseLesson)
+                      .WithMany(e => e.Materials)
+                      .HasForeignKey(e => e.CourseLessonId);
+            });
+
+
+
+
         }
 
 

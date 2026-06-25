@@ -1,5 +1,7 @@
 ﻿
 
+#nullable disable
+
 using System.ComponentModel.DataAnnotations;
 
 namespace RM.Models

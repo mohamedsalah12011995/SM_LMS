@@ -378,6 +378,8 @@ namespace RM.Users.Services
              new OutputDictionary(OperationOutputKeys.UserEntity, userloginDto),
              new OutputDictionary(OperationOutputKeys.Entities, userloginDto.Entities),
              new OutputDictionary(OperationOutputKeys.UserJWT, GenerateToken(userloginDto)));
+
+
         }
 
         public async Task<OperationOutput> ChangeUserReference(Dtos.Users RequestedData)

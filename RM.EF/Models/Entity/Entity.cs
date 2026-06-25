@@ -1,8 +1,7 @@
-﻿
-
-#nullable disable
+﻿#nullable disable
 
 
+using RM.Courses.Models;
 
 namespace RM.Models
 {
@@ -52,6 +51,7 @@ namespace RM.Models
             CronSettings = new HashSet<CronSettings>();
             Feedbacks = new HashSet<Feedbacks>();
             FeedbacksAnswerActions = new HashSet<FeedbacksAnswerAction>();
+            Courses = new HashSet<Course>();
         }
 
         public int Id { get; set; }
@@ -116,6 +116,11 @@ namespace RM.Models
         public virtual ICollection<Feedbacks> Feedbacks { get; set; }
         public virtual ICollection<FeedbacksAnswerAction>  FeedbacksAnswerActions { get; set; }
         public virtual ICollection<CronSettings> CronSubEntitySettings { get; set; }
+        public virtual ICollection<Course> Courses { get; set; }
+
+        //public virtual ICollection<CourseLesson> CourseLessons { get; set; }
+        //public virtual ICollection<CourseLessonMaterial> CourseLessonMaterials { get; set; }
+    
 
 
     }

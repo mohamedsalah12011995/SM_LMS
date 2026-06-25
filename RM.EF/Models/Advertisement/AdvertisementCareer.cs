@@ -1,4 +1,6 @@
 ﻿
+#nullable disable
+
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RM.Models

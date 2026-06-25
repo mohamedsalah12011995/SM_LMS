@@ -1,4 +1,6 @@
 ﻿
+#nullable disable
+
 using Microsoft.EntityFrameworkCore;
 
 namespace RM.Models.Extensions
@@ -107,11 +109,12 @@ namespace RM.Models.Extensions
             builder.QuestionsRecommendationsConfiguration();
             builder.RecommendationsConfiguration();
             builder.CronSettingsConfiguration();
-
             builder.FeedbacksConfiguration();
             builder.FeedbacksDataSourceConfiguration();
             builder.FeedbacksAnswerActionConfiguration();
             builder.FeedbacksAnswerConfiguration();
+            builder.CoursesConfiguration();
+
 
 
         }

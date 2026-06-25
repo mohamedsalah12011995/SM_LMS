@@ -1,0 +1,6 @@
+@RM.Courses_HostAddress = http://localhost:5093
+
+GET {{RM.Courses_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

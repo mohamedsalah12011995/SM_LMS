@@ -1229,6 +1229,38 @@
       "UpstreamPathTemplate": "/gateway/WorkFlow/{fun}"
     },
     {
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          //ToDoo
+          "Port": 28271
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Courses/Resource/{fileName}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Courses/Resource/{fileName}"
+    },
+    {
+
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          //ToDoo
+          "Port": 3740
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Courses/{Coursesfun}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamPathTemplate": "/gateway/Courses/{Coursesfun}"
+    },
+    {
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "ProviderKey",
         "AllowedScopes": []

@@ -1,6 +1,11 @@
 ﻿
+#nullable disable
+
 using Microsoft.EntityFrameworkCore;
+using RM.Courses.Models;
+using RM.EF.Models.Course;
 using RM.Models.Extensions;
+using System.Diagnostics.Metrics;
 
 
 #nullable disable
@@ -127,6 +132,20 @@ namespace RM.Models
         public virtual DbSet<FormsEntity> FormsEntity { get; set; }
         public virtual DbSet<FormValueDetails> FormValueDetails { get; set; }
         public virtual DbSet<FormValueViewStatistic> FormValueViewStatistic { get; set; }
+
+        // Courses 
+        public virtual DbSet<Course> Courses { get; set; }
+        public virtual DbSet<CourseLessonMaterial> CourseLessonMaterials { get; set; }
+        public virtual DbSet<CourseLesson> CourseLessons { get; set; }
+        public virtual DbSet<CourseInstructor> CourseInstructors { get; set; }
+        public virtual DbSet<Instructor> Instructors { get; set; }
+        public virtual DbSet<CourseLearningOutcome> CourseLearningOutcomes { get; set; }
+        public virtual DbSet<CourseCategory> CourseCategorys { get; set; }
+        public virtual DbSet<CoursePrerequisite> CoursePrerequisites { get; set; }
+        public virtual DbSet<CourseTag> CourseTags { get; set; }
+        public virtual DbSet<CourseTagMapping> CourseTagMappings { get; set; }
+        public virtual DbSet<CourseTargetAudience> CourseTargetAudiences { get; set; }
+        public virtual DbSet<CourseSection> CourseSections { get; set; }
 
 
         public virtual DbSet<Engine> Engine { get; set; }

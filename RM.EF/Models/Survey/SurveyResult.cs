@@ -1,4 +1,6 @@
 ﻿
+#nullable disable
+
 namespace RM.Models
 {
     public class SurveyResult
