@@ -5,13 +5,13 @@ namespace RM.Courses.Services
 {
     public interface ICourseLessonService
     {
-        // --- الأقسام (Course Sections) ---
+        //الأقسام (Course Sections)
         Task<OperationOutput> GetSectionsList(CourseLessonDto RequestedData);
         Task<OperationOutput> SaveSection(CourseLessonDto RequestedData);
         Task<OperationOutput> UpdateSectionById(CourseLessonDto RequestedData);
         Task<OperationOutput> DeleteSection(CourseLessonDto RequestedData);
 
-        // --- الدروس (Course Lessons) ---
+        // الدروس (Course Lessons)
         Task<OperationOutput> GetLessonsList(   CourseLessonDto RequestedData);
         Task<OperationOutput> GetLessonDetails(CourseLessonDto RequestedData);
         Task<OperationOutput> SaveLesson(CourseLessonDto RequestedData);

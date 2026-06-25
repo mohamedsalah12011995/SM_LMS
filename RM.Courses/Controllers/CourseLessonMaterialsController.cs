@@ -30,7 +30,6 @@ namespace RM.Courses.Controllers
         [HttpPost("updateMaterial")]
         public async Task<IActionResult> UpdateMaterial([FromBody] CoursLessoneMaterialDto request)
         {
-            // يمرر الـ Dto الخاص بالمرفقات مباشرة للـ Service المسؤولة عنها
             var result = await _service.UpdateMaterialById(request);
             return Ok(result);
         }

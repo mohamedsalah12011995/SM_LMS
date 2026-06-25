@@ -74,7 +74,6 @@ namespace RM.Courses.Services
             if (dbItem == null)
                 return OperationOutput.GetOperationOutput(header: Enums.ServiceMessages.NoDataReturned);
 
-            // 🚀 تحديث سريع ومباشر للمرفق
             RequestedData.Adapt(dbItem);
 
             _unitOfWork.CourseLessonMaterials.Update(dbItem);

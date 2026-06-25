@@ -28,7 +28,6 @@ namespace RM.Courses.Services
 
         public async Task<OperationOutput> GetCourseseList(CourseDto RequestedData)
         {
-            // جلب البيانات باستخدام الـ Mapster المضبط بأمان
             var data = await _unitOfWork.Courses
                 .GetAll()
                 .Where(x => x.ReferenceId == RequestedData.ReferenceId &&
